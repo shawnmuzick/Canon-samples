@@ -1,0 +1,128 @@
+/* FONTS-------------------------------------------------------------- */
+@font-face {
+  font-family: "HoboStd";
+  src: url("/public/fonts/HoboStd.otf");
+}
+@font-face {
+  font-family: "barcode";
+  src: url("/public/fonts/LibreBarcode39Text-Regular.ttf");
+}
+@font-face {
+  font-family: "barcode2";
+  src: url("/public/fonts/LibreBarcode128Text-Regular.ttf");
+}
+/* Utility Classes */
+.flex {
+  display: flex;
+}
+.column{
+  flex-direction: column;
+}
+.rounded {
+  border-radius: var(--round-corners);
+}
+.bg-main{
+  background-color: var(--bg-main);
+}
+.bg-black-glass{
+  background: var(--black-glass);
+  backdrop-filter: blur(2rem);
+}
+.bg-red-glass{
+  background: var(--red-glass);
+  backdrop-filter: blur(2rem);
+}
+/* Styles */
+html {
+  font-family: "HoboStd";
+}
+.pageTitle {
+  text-align: center;
+}
+body {
+  color: white;
+  padding: var(--padding-m);
+}
+.glass {
+  flex-direction: row;
+  background: var(--red-glass);
+  backdrop-filter: blur(2rem);
+  padding: var(--padding-m);
+  min-width: 200px;
+}
+.content {
+  padding: var(--padding-m);
+}
+.content :is(h2, h3) {
+  text-align: center;
+}
+.block {
+  margin: var(--margin-l);
+}
+hr,
+.divider {
+  border: 0.5px solid red;
+  width: 100%;
+}
+#skuSearchContainer {
+  max-width: 60vw;
+}
+.formGroup {
+  margin: var(--margin-s);
+  flex-direction: row;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+}
+.formGroup label {
+  width: 200px;
+  margin-right: var(--margin-s);
+}
+.formGroup :is(input, select, textarea, input, select, textarea),
+input,
+textarea {
+  width: 100%;
+  margin: var(--margin-s);
+  padding: var(--padding-s);
+  border: 1px solid black;
+  outline: none;
+  font-family: "HoboStd";
+}
+text {
+  resize: none;
+}
+button {
+  border-radius: var(--round-corners);
+  color: white;
+  background-color: red;
+  outline: 0px;
+  border: 0px;
+  padding: var(--padding-m);
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: red;
+}
+@media print {
+  #nav {
+    display: none;
+  }
+  #siteHeader {
+    display: none;
+  }
+}
